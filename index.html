@@ -769,7 +769,7 @@ footer{background:var(--ink);padding:76px 68px 40px;}
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Loader
-window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('loader').classList.add('hide'),2000);});
+setTimeout(()=>{document.getElementById('loader').classList.add('hide');},2000);
 
 // Cursor
 const cur=document.getElementById('cur'),curR=document.getElementById('curR');
@@ -791,4 +791,11 @@ const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.targ
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
 // Form
-document.getElementById('fsub').addEventL
+document.getElementById('fsub').addEventListener('click',function(){
+  this.textContent='✓ Message envoyé !';
+  this.style.background='#16a34a';
+  setTimeout(()=>{this.textContent='Envoyer ma demande →';this.style.background='';},3000);
+});
+</script>
+</body>
+</html>
