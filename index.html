@@ -87,7 +87,7 @@ nav.up{background:rgba(244,251,255,.94);backdrop-filter:blur(24px);border-bottom
 .h-s-l{font-size:.58rem;color:var(--pale);letter-spacing:.16em;text-transform:uppercase;margin-top:5px;}
 
 /* Hero pool visual */
-.hero-right{position:absolute;right:-20px;top:50%;transform:translateY(-50%);width:500px;height:500px;opacity:0;animation:elIn 1.2s cubic-bezier(.16,1,.3,1) 1.2s forwards;}
+.hero-right{position:absolute;left:55%;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:0;animation:elIn 1.2s cubic-bezier(.16,1,.3,1) 1.2s forwards;}
 #heroRadar{width:460px;height:460px;display:block;}
 
 
@@ -920,7 +920,7 @@ if(window.innerWidth < 768){
 (function(){
   const canvas = document.getElementById('heroRadar');
   if(!canvas) return;
-  const W = 460, H = 460;
+  const W = 440, H = 440;
   canvas.width=W; canvas.height=H;
   const ctx = canvas.getContext('2d');
   const cx=W/2, cy=H/2;
